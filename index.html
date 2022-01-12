@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../rx-layout-global/css/rx-layout.css" />
+    <link rel="stylesheet" href="icons/css/fontisto/fontisto.min.css" />
+    <link rel="stylesheet" href="css/rx-kmj.css" />
+    <link rel="stylesheet" href="splide/dist/css/splide-core.min.css" />
+    <title>KMJTrans Definitive Edition</title>
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <nav class="rx-navbar">
+      <ul class="rx-mw-1200 rx-fw">
+        <li>
+          <a href=""><img src="images/logo.png" alt="" /></a>
+        </li>
+        <li>
+          <li class="rx-side-toggle">
+            <span></span>
+          </li>
+          <ul class="rx-side rx-fl-ai-ce">
+            <li><a class="rx-nav-link rx-active" href="">BERANDA</a></li>
+            <li><a class="rx-nav-link" href="">LAYANAN</a></li>
+            <li><a class="rx-nav-link" href="">TENTANG KAMI</a></li>
+            <li><a class="rx-nav-link" href="">HUBUNGI KAMI</a></li>
+            <li><div class="rx-ver-line"></div></li>
+            <div class="rx-fl-ro">
+              <li>
+                <a href=""><i class="fi fi-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fi fi-facebook"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fi fi-whatsapp"></i></a>
+              </li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- SlideShow -->
+    <div class="rx-splide splide">
+      <div class="rx-mw-1200 rx-fw rx-fh">
+        <form action="" class="rx-home-form">
+          <span>LACAK DAN CEK RESI</span>
+          <div class="rx-fl-in rx-fl-ai-ce rx-fl-jc-ce">
+            <input type="text">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide" style="background-image: url(images/pexels-tom-fisk-3840441.jpg);">
+          </li>
+          <li class="splide__slide"></li>
+          <li class="splide__slide"></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="splide/dist/js/splide.min.js"></script>
+  <script>
+    new Splide(".splide").mount();
+  </script>
+  <script src="js/rx-kmj.js"></script>
+  <script src="../rx-layout-global/js/rx-layout.js"></script>
+</html>

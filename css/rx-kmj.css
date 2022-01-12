@@ -1,0 +1,277 @@
+a {
+  display: block;
+}
+
+/* Navigation Bar */
+.rx-navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 40, 60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 15px;
+}
+.rx-navbar::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  bottom: -10px;
+  background-color: rgba(255, 90, 0);
+}
+.rx-navbar .rx-nav-link {
+  margin: 0 25px;
+}
+.rx-navbar img {
+  height: 35px;
+}
+.rx-navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.rx-navbar ul a {
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: white;
+}
+.rx-navbar ul a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+.rx-navbar i {
+  font-size: 18px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.rx-ver-line {
+  height: 35px;
+  width: 3px;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+@media (max-width: 1050px) {
+  .rx-navbar ul.rx-side {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    background-image: linear-gradient(135deg, rgba(0, 40, 60), rgba(70, 25, 0));
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: center;
+    transform: translateX(-110%);
+    transition: transform 250ms ease-in;
+    overflow: hidden;
+  }
+  .rx-navbar ul.rx-side.rx-side-open {
+    transform: translateX(0);
+  }
+  .rx-navbar ul.rx-side li a {
+    font-size: 24px;
+    font-family: "Bold";
+    letter-spacing: 10px;
+    margin: 15px 0;
+    color: rgba(255, 255, 255, 0.25);
+    transition: color 50ms;
+  }
+  .rx-navbar ul.rx-side li a:hover {
+    color: rgba(255, 255, 255);
+  }
+  .rx-navbar ul.rx-side li a.rx-active {
+    position: relative;
+    color: rgba(255, 255, 255);
+    margin-left: 50px;
+  }
+  .rx-navbar ul.rx-side li a.rx-active::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    width: 30px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.25);
+    pointer-events: none;
+  }
+  .rx-navbar .rx-ver-line {
+    display: none;
+  }
+  .rx-navbar ul.rx-side i {
+    font-size: 24px;
+    color: white;
+  }
+  .rx-navbar ul.rx-side .rx-fl-ro {
+    position: absolute;
+    bottom: 25px;
+  }
+  .rx-side-toggle {
+    position: relative;
+    cursor: pointer;
+    z-index: 15;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin-right: 15px;
+    transition: transform 150ms, width 150ms, background-color 150ms;
+  }
+  .rx-side-toggle span {
+    position: absolute;
+    height: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .rx-side-toggle::before {
+    content: "";
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    background-color: white;
+    transition: transform 150ms, width 150ms, top 150ms;
+  }
+  .rx-side-toggle::after {
+    content: "";
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: white;
+    transition: transform 150ms, width 150ms, bottom 150ms;
+  }
+  .rx-side-toggle.rx-side-toggle-open {
+    background-color: transparent;
+  }
+  .rx-side-toggle.rx-side-toggle-open::before {
+    width: 100%;
+    transform: rotateZ(45deg);
+    top: 0px;
+  }
+  .rx-side-toggle.rx-side-toggle-open::after {
+    width: 100%;
+    transform: rotateZ(-45deg);
+    bottom: 0px;
+  }
+}
+
+/* Splide JS */
+.rx-splide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh) * 100);
+}
+.rx-splide .splide__slide {
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh) * 100);
+  background-size: cover;
+}
+.rx-splide .splide__arrows {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: calc(50% - 75px);
+  right: 0;
+  z-index: 5;
+  width: 100%;
+  padding: 25px;
+}
+.rx-splide .splide__arrows .splide__arrow--prev,
+.rx-splide .splide__arrows .splide__arrow--next {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
+}
+.rx-splide .splide__arrows .splide__arrow--prev::before,
+.rx-splide .splide__arrows .splide__arrow--next::before {
+  content: "<";
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 25px;
+}
+.rx-splide .splide__arrows .splide__arrow--next::before {
+  content: ">";
+}
+.rx-splide .splide__arrows .splide__arrow--prev:hover,
+.rx-splide .splide__arrows .splide__arrow--next:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 3px solid rgba(255, 255, 255);
+}
+.rx-splide .splide__arrows .splide__arrow--prev:hover::before,
+.rx-splide .splide__arrows .splide__arrow--next:hover::before {
+  color: rgba(255, 255, 255);
+}
+.rx-splide .splide__arrows .splide__arrow--prev {
+}
+.rx-splide .splide__arrows .splide__arrow--prev svg,
+.rx-splide .splide__arrows .splide__arrow--next svg {
+  display: none;
+}
+.rx-splide .rx-mw-1200 {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rx-home-form {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 40, 60);
+  padding: 10px 15px;
+}
+.rx-home-form span {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-family: "Bold";
+}
+.rx-home-form button {
+  background-color: rgba(255, 90, 0);
+  border: none;
+  padding: 10px 25px;
+  color: white;
+  letter-spacing: 5px;
+  font-family: "Bold";
+}
+.rx-home-form input {
+  padding: 10px 15px;
+  border: none;
+  margin-right: 7.5px;
+}
+.rx-home-form .rx-fl-in {
+  margin-top: 5px;
+}
+@media (max-width: 600px) {
+  .rx-home-form {
+    width: 100%;
+  }
+  .rx-home-form input {
+    width: 100%;
+  }
+}
