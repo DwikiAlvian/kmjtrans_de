@@ -46,7 +46,7 @@
 
     <!-- SlideShow -->
     <div class="rx-splide splide">
-      <div class="rx-mw-1200 rx-fw rx-fh">
+      <div class="rx-mw-1200 rx-fw">
         <form action="" class="rx-home-form">
           <span>LACAK DAN CEK RESI</span>
           <div class="rx-fl-in rx-fl-ai-ce rx-fl-jc-ce">
@@ -57,17 +57,36 @@
       </div>
       <div class="splide__track">
         <ul class="splide__list">
-          <li class="splide__slide" style="background-image: url(images/pexels-tom-fisk-3840441.jpg);">
+          <li class="splide__slide">
+            <img src="images/pexels-tom-fisk-3840441.jpg" alt="">
+            <div class="rx-mw-1200 rx-fw rx-fl-co">
+              <h1>Pelayanan Seluruh Indonesia</h1>
+              <a href="">LIHAT SELENGKAPNYA</a>
+            </div>
           </li>
-          <li class="splide__slide" style="background-image: url(https://images.pexels.com/photos/448835/pexels-photo-448835.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);"></li>
-          <li class="splide__slide" style="background-image: url(https://images.pexels.com/photos/8164749/pexels-photo-8164749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);"></li>
+          <li class="splide__slide">
+            <img src="https://images.pexels.com/photos/448835/pexels-photo-448835.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <div class="rx-mw-1200 rx-fw rx-fl-co">
+              <h1>Akses Mudah Dimana Saja</h1>
+              <a href="">LIHAT SELENGKAPNYA</a>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img src="https://images.pexels.com/photos/8164749/pexels-photo-8164749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <div class="rx-mw-1200 rx-fw rx-fl-co">
+              <h1>Diskon Pengiriman Tahun Baru</h1>
+              <a href="">LIHAT SELENGKAPNYA</a>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </body>
   <script src="splide/dist/js/splide.min.js"></script>
   <script>
-    new Splide(".splide").mount();
+    new Splide(".splide",{
+      type : 'loop'
+    }).mount();
   </script>
   <script src="js/rx-kmj.js"></script>
   <script src="../rx-layout-global/js/rx-layout.js"></script>
