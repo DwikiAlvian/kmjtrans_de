@@ -360,3 +360,12 @@ a {
     font-size: 2.5rem !important;
   }
 }
+
+/* Section */
+.rx-blue-section {
+  background-color: rgba(0, 40, 60);
+  color: white;
+}
+orange {
+  color: rgba(255, 90, 0);
+}
