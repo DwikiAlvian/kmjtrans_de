@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="icons/css/fontisto/fontisto.min.css" />
     <link rel="stylesheet" href="css/rx-kmj.css" />
     <link rel="stylesheet" href="splide/dist/css/splide-core.min.css" />
+    <link rel="stylesheet" href="css/option-search.css">
     <title>KMJTrans Definitive Edition</title>
   </head>
   <body>
@@ -87,17 +88,58 @@
 
     <!-- Cek Harga / Tarif -->
     <div class="rx-blue-section rx-fl-co rx-fl-ai-ce">
-      <div class="rx-mw-1200 rx-fw rx-gr-co-350-auto">
-        <div>
-          <form action="">
+      <div class="rx-mw-1200 rx-fw rx-gr-co-350-au rx-900-gr-co">
+        <!-- Form Estimasi Pengiriman -->
+        <div class="rx-fl-ro rx-fl-ai-ce" style="width: 100%;">
+          <form action="" class="rx-ma-25" style="width: 100%;">
             <h2>Estimasi <orange>Tarif Pengiriman</orange> Barang</h2>
+            <lb></lb>
+            <div class="rx-form-line">
+              <span>LOKASI PICKUP</span>
+              <div class="rx-custom-select rx-fw">
+                <select name="" id="">
+                  <option value="">Bali</option>
+                  <option value="">Irian Jaya</option>
+                  <option value="">Depok</option>
+                </select>
+              </div>
+            </div>
+            <div class="rx-form-line">
+              <span>TUJUAN</span>
+              <div class="rx-custom-select rx-fw">
+                <select name="" id="">
+                  <option value="">Malang</option>
+                  <option value="">Surabaya</option>
+                  <option value="">Jepara</option>
+                </select>
+              </div>
+            </div>
+            <div class="rx-gr-co-au-150 rx-400-gr-co rx-gr-rg-15">
+              <div class="rx-form-line rx-ma-0">
+                <span>BERAT</span>
+                <input type="text" placeholder="10~150">
+              </div>
+              <div class="rx-form-line rx-ma-0">
+                <span>SATUAN</span>
+                <div class="rx-custom-select rx-fw">
+                  <select name="" id="">
+                    <option value="">kg</option>
+                    <option value="">ton</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button class="rx-form-submit">>> SUBMIT <<</button>
           </form>
         </div>
-        <div></div>
+        <!-- Hasil Pengecekan Estimasi -->
+        <div style="background-color: white; margin: 25px; border-radius: 25px; height: 450px;">
+        </div>
       </div>
     </div>
   </body>
   <script src="splide/dist/js/splide.min.js"></script>
+  <script src="js/option-search.js"></script>
   <script>
     new Splide(".splide",{
       type : 'loop'
