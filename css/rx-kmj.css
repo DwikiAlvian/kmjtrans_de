@@ -63,7 +63,11 @@ a {
   margin-right: 20px;
   margin-left: 10px;
 }
-
+@media (max-width: 900px) {
+  #rxEstimate {
+    padding-top: 75px;
+  }
+}
 @media (max-width: 1050px) {
   .rx-navbar ul.rx-side {
     position: fixed;
@@ -362,6 +366,25 @@ a {
   }
   .rx-splide .splide__slide div h1 {
     font-size: 2.5rem !important;
+  }
+}
+.rx-home-no-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.rx-home-no-data img {
+  height: 75px;
+}
+.rx-home-no-data span {
+  color: rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 900px) {
+  .rx-home-no-data {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
